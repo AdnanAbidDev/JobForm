@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "ag-grid-community/styles/ag-grid.css";
+@import "ag-grid-community/styles/ag-theme-alpine.css";
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.add-grid-column {
+  color: #74b974 !important;
+  font-weight: 600 !important;
+}
+.edit-icon {
+  font-weight: 600;
+  color: #74b974;
+  text-align: center;
+}
+.delete-icon {
+  font-weight: 600;
+  text-align: center;
+  color: red;
+}

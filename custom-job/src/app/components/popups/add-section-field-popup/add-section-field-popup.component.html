@@ -1,0 +1,24 @@
+<div *ngIf="isPopUpVisible" class="popup-overlay">
+  <div class="popup">
+    <h2>Add New {{ isSection ? "Section" : "Field" }}</h2>
+    <form [formGroup]="popupForm" (ngSubmit)="onSubmit()">
+      <!-- Input for Section/Field Name -->
+      <div class="form-group">
+        <label for="name">{{ isSection ? "Section" : "Field" }} Name</label>
+        <input type="text" id="name" formControlName="name" />
+      </div>
+
+      <!-- Conditional Input for Default Field (only for Section) -->
+      <div *ngIf="isSection" class="form-group">
+        <label for="defaultField">Default Field</label>
+        <input type="text" id="defaultField" formControlName="defaultField" />
+      </div>
+
+      <!-- Submit and Cancel Buttons -->
+      <div class="form-action-buttons">
+        <button type="submit">Submit</button>
+        <button type="button" (click)="close()">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>
